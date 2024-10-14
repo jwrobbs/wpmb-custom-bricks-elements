@@ -13,7 +13,7 @@
 
 namespace WPMB_Custom_Bricks_Elements;
 
-use WPMB_Custom_Bricks_Elements\src\Rank_Math_Breadcrumbs;
+use WPMB_Custom_Bricks_Elements\src\Breadcrumbs_For_Yoast;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -29,5 +29,5 @@ add_action( 'init', __NAMESPACE__ . '\init', 11 );
  * @return void
  */
 function init() {
-	new Rank_Math_Breadcrumbs();
+	new Breadcrumbs_For_Yoast();
 }
