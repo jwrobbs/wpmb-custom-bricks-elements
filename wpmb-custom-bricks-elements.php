@@ -3,7 +3,7 @@
  * Plugin Name: WPMB Custom Bricks Elements
  * Plugin URI: https://wpmasterbuilder.com
  * Description: Custom elements for Bricks Builder (WordPress plugin).
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Josh Robbs
  * Author URI: https://wpmasterbuilder.com
  * License: GPL2
