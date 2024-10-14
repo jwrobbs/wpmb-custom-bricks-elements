@@ -1,0 +1,12 @@
+{
+    "name": "jwrobbs/wpmb-custom-bricks-elements",
+    "description": "Custom elements for Bricks Builder (WordPress plugin).",
+    "type": "wordpress-plugin",
+	"version": "1.0.0",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "src/"
+		]
+    }
+}
