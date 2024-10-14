@@ -7,8 +7,6 @@
 
 namespace WPMB_Custom_Bricks_Elements\src;
 
-use Bricks\Element;
-
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -16,14 +14,14 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return void
  */
-class Breadcrumbs_For_Yoast extends Element {
+class Breadcrumbs_For_Yoast extends \Bricks\Element {
 
 	/**
 	 * Element category.
 	 *
 	 * @var string
 	 */
-	public $category = 'custom';
+	public $category = 'WPMB';
 	/**
 	 * Element name.
 	 *
@@ -82,6 +80,6 @@ class Breadcrumbs_For_Yoast extends Element {
 	 * @return array
 	 */
 	public function get_keywords() {
-		return array( 'breadcrumbs', 'yoast', 'seo' );
+		return array( 'breadcrumbs', 'yoast', 'seo', 'wpmb' );
 	}
 }
