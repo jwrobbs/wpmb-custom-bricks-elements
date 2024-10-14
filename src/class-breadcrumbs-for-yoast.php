@@ -1,6 +1,6 @@
 <?php
 /**
- * Rank Math Breadcrumbs Element.
+ * Breadcrumbs for Yoast Element.
  *
  * @package WPMB_Custom_Bricks_Elements
  */
@@ -12,11 +12,11 @@ use Bricks\Element;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Rank Math Breadcrumbs Element.
+ * Breadcrumbs for Yoast Element.
  *
  * @return void
  */
-class Rank_Math_Breadcrumbs extends Element {
+class Breadcrumbs_For_Yoast extends Element {
 
 	/**
 	 * Element category.
@@ -29,7 +29,7 @@ class Rank_Math_Breadcrumbs extends Element {
 	 *
 	 * @var string
 	 */
-	public $name = 'jwr_rank_math_breadcrumbs';
+	public $name = 'wpmb_yoast_breadcrumbs';
 
 	/**
 	 * Element icon.
@@ -44,7 +44,7 @@ class Rank_Math_Breadcrumbs extends Element {
 	 * @return string
 	 */
 	public function get_label() {
-		return 'Rank Math Breadcrumbs';
+		return 'Breadcrumbs for Yoast';
 	}
 
 	/**
@@ -69,9 +69,11 @@ class Rank_Math_Breadcrumbs extends Element {
 	 * If no 'render_builder' function is defined then this code is used to render element HTML in builder, too.
 	 */
 	public function render() {
-		echo wp_kses_post( "<div {$this->render_attributes( '_root' )}>" );
-		echo do_shortcode( '[rank_math_breadcrumb]' );
-		echo '</div>';
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			echo wp_kses_post( "<div {$this->render_attributes( '_root' )}>" );
+			yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+			echo '</div>';
+		}
 	}
 
 	/**
@@ -80,6 +82,6 @@ class Rank_Math_Breadcrumbs extends Element {
 	 * @return array
 	 */
 	public function get_keywords() {
-		return array( 'breadcrumbs', 'rank math', 'seo' );
+		return array( 'breadcrumbs', 'yoast', 'seo' );
 	}
 }
