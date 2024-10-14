@@ -23,13 +23,13 @@ class Code_Highlighter_Block extends Element {
 	 *
 	 * @var string
 	 */
-	public $category = 'custom';
+	public $category = 'WPMB';
 	/**
 	 * Element name.
 	 *
 	 * @var string
 	 */
-	public $name = 'jwr-code-highlighter';
+	public $name = 'wpmb-code-highlighter';
 	/**
 	 * Element icon.
 	 *
@@ -162,6 +162,6 @@ class Code_Highlighter_Block extends Element {
 	 * @return array
 	 */
 	public function get_keywords() {
-		return array( 'code', 'highlighter', 'highlight', 'syntax', 'highlighting' );
+		return array( 'code', 'highlighter', 'highlight', 'syntax', 'highlighting', 'wpmb' );
 	}
 }
