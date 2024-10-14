@@ -10,3 +10,8 @@ The plugin is in development. Use at your own risk. Assume that none of this is 
 - [ ] Test highlighter
 - [ ] Test highlighter languages array
 
+
+
+# Notes
+- Switched from Rank Math to Yoast: Rank Math itself was having issues. Will look
+	into that later.
