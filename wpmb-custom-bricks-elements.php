@@ -3,7 +3,7 @@
  * Plugin Name: WPMB Custom Bricks Elements
  * Plugin URI: https://wpmasterbuilder.com
  * Description: Custom elements for Bricks Builder (WordPress plugin).
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Josh Robbs
  * Author URI: https://wpmasterbuilder.com
  * License: GPL2
@@ -12,8 +12,6 @@
  */
 
 namespace WPMB_Custom_Bricks_Elements;
-
-use WPMB_Custom_Bricks_Elements\src\Breadcrumbs_For_Yoast;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -29,5 +27,14 @@ add_action( 'init', __NAMESPACE__ . '\init', 11 );
  * @return void
  */
 function init() {
-	new Breadcrumbs_For_Yoast();
+	$element_files = array(
+		__DIR__ . '/src/class-breadcrumbs-for-yoast.php',
+		__DIR__ . '/src/code-highlighter/class-code-highlighter-block.php',
+	);
+
+	foreach ( $element_files as $file ) {
+		if ( file_exists( $file ) ) {
+			\Bricks\Elements::register_element( $file );
+		}
+	}
 }
