@@ -122,9 +122,9 @@ class Code_Highlighter_Block extends Element {
 		// Enqueue base CSS for the code block.
 		wp_enqueue_style(
 			'code-highlighter-css',
-			WPMB_CUSTOM_BRICKS_ELEMENTS_URL . '/includes/common/custom-bricks-elements/code-highlighter/code-highlighter.css',
+			WPMB_CUSTOM_BRICKS_ELEMENTS_URL . 'src/code-highlighter/code-highlighter.css',
 			array(),
-			filemtime( WPMB_CUSTOM_BRICKS_ELEMENTS_PATH . '/includes/common/custom-bricks-elements/code-highlighter/code-highlighter.css' ) ?? '1',
+			filemtime( WPMB_CUSTOM_BRICKS_ELEMENTS_PATH . 'src/code-highlighter/code-highlighter.css' ) ?? '1',
 		);
 
 			// Initialize highlight . js .
